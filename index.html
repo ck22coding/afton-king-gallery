@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afton King | Art Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Afton King</h1>
+        <p class="scripture-quote">"Therefore let your light so shine before this people, that they may see your good works and glorify your Father who is in heaven."</p>
+    </header>
+
+    <nav>
+        <a href="#work-in-progress">Work in Progress</a>
+        <a href="#paintings">Paintings</a>
+    </nav>
+
+    <main>
+        <section id="work-in-progress">
+            <h2>Work in Progress</h2>
+            <div class="gallery gallery-centered">
+                <div class="artwork" data-title="Go and Sin No More">
+                    <img src="images/artwork/JesusWIP.jpg" alt="Go and Sin No More">
+                    <p class="artwork-title">Go and Sin No More</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="paintings">
+            <h2>Paintings</h2>
+            <div class="gallery">
+                <div class="artwork" data-title="Firstfruits">
+                    <img src="images/artwork/firstfruits.jpg" alt="Firstfruits">
+                    <p class="artwork-title">Firstfruits</p>
+                </div>
+                <div class="artwork" data-title="Milk and Honey">
+                    <img src="images/artwork/milkandhoney.jpg" alt="Milk and Honey">
+                    <p class="artwork-title">Milk and Honey</p>
+                </div>
+                <div class="artwork" data-title="Mount of Olives">
+                    <img src="images/artwork/mountofolives.jpg" alt="Mount of Olives">
+                    <p class="artwork-title">Mount of Olives</p>
+                </div>
+                <div class="artwork" data-title="Pearl of Great Price">
+                    <img src="images/artwork/pearl.jpg" alt="Pearl of Great Price">
+                    <p class="artwork-title">Pearl of Great Price</p>
+                </div>
+                <div class="artwork" data-title="Lilies of the Field">
+                    <img src="images/artwork/lilies.jpg" alt="Lilies of the Field">
+                    <p class="artwork-title">Lilies of the Field</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+        <p class="lightbox-title" id="lightbox-title"></p>
+    </div>
+
+    <footer>
+        <p>&copy; Afton King</p>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>

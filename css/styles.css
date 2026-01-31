@@ -1,0 +1,337 @@
+/* =============================================
+   Afton King Art Gallery - Styles
+   ============================================= */
+
+:root {
+    --color-background: #FFFFFF;
+    --color-header-footer: #A8C8DC;
+    --color-accent: #B22222;
+    --color-hover: #8B0000;
+    --color-text: #333333;
+    --color-gold: #D4AF37;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: var(--color-header-footer);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(3rem, 10vw, 6rem);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.scripture-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--color-text);
+    margin-top: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--color-background);
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+nav a {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-header-footer);
+    text-decoration: none;
+    margin: 0 2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Sections */
+section {
+    margin-bottom: 4rem;
+}
+
+section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+    letter-spacing: 0.15em;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.gallery-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-centered .artwork {
+    max-width: 300px;
+}
+
+/* Artwork Items */
+.artwork {
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.artwork:hover {
+    transform: translateY(-4px);
+}
+
+.artwork img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+    background-color: #f0f0f0;
+}
+
+.artwork:hover img {
+    opacity: 0.9;
+}
+
+.artwork-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.artwork:hover .artwork-title {
+    color: var(--color-accent);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
+
+.lightbox-close:hover {
+    color: var(--color-accent);
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-header-footer);
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+footer p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    letter-spacing: 0.1em;
+}
+
+/* =============================================
+   Responsive Design
+   ============================================= */
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    main {
+        padding: 2rem 1.5rem;
+    }
+
+    nav a {
+        margin: 0 1rem;
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 2.5rem 1rem;
+    }
+
+    header h1 {
+        letter-spacing: 0.15em;
+    }
+
+    .scripture-quote {
+        padding: 0 1rem;
+    }
+
+    nav {
+        padding: 0.75rem 1rem;
+    }
+
+    nav a {
+        margin: 0 0.75rem;
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+
+    .lightbox-close {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .lightbox-image {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+
+    .lightbox-title {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+        letter-spacing: 0.1em;
+    }
+
+    .artwork-title {
+        font-size: 0.9rem;
+    }
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
