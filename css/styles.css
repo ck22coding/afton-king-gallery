@@ -35,59 +35,29 @@ body {
 
 /* Header */
 header {
-    background-color: var(--color-header-footer);
-    padding: 4rem 2rem;
+    background-color: transparent;
+    padding: 1.5rem 2rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: clamp(2rem, 6vw, 3.5rem);
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--color-text);
     margin: 0;
 }
 
-.scripture-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    color: var(--color-text);
-    margin-top: 1.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.5;
-}
-
-/* Navigation */
-nav {
-    background-color: var(--color-background);
-    padding: 1rem 2rem;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-}
-
-nav a {
-    font-family: 'Cormorant Garamond', serif;
-    color: var(--color-header-footer);
-    text-decoration: none;
-    margin: 0 2rem;
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--color-accent);
-}
 
 /* Main Content */
 main {
     flex: 1;
-    padding: 3rem 2rem;
+    padding: 1.5rem 2rem;
     max-width: 1600px;
     margin: 0 auto;
     width: 100%;
@@ -137,8 +107,8 @@ section h2 {
 
 .artwork img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     display: block;
     transition: opacity 0.3s ease;
     background-color: #f0f0f0;
@@ -221,7 +191,7 @@ section h2 {
 
 /* Footer */
 footer {
-    background-color: var(--color-header-footer);
+    background-color: transparent;
     padding: 1.5rem 2rem;
     text-align: center;
 }
@@ -245,16 +215,13 @@ footer p {
     }
 
     header {
-        padding: 3rem 1.5rem;
+        padding: 1.25rem 1.5rem;
     }
 
     main {
         padding: 2rem 1.5rem;
     }
 
-    nav a {
-        margin: 0 1rem;
-    }
 }
 
 /* Mobile: 1 column */
@@ -267,24 +234,11 @@ footer p {
     }
 
     header {
-        padding: 2.5rem 1rem;
+        padding: 1rem 1rem;
     }
 
     header h1 {
         letter-spacing: 0.15em;
-    }
-
-    .scripture-quote {
-        padding: 0 1rem;
-    }
-
-    nav {
-        padding: 0.75rem 1rem;
-    }
-
-    nav a {
-        margin: 0 0.75rem;
-        font-size: 1rem;
     }
 
     main {
@@ -315,7 +269,7 @@ footer p {
 /* Small mobile */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
         letter-spacing: 0.1em;
     }
 
