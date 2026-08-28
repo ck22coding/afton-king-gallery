@@ -22,3 +22,4 @@ Thumbs.db
 
 # Archived old builds (kept locally, not tracked)
 archive/
+.gstack/
