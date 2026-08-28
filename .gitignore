@@ -16,3 +16,9 @@ Thumbs.db
 
 # Claude Code local files
 .claude/
+
+# Vercel
+.vercel/
+
+# Archived old builds (kept locally, not tracked)
+archive/

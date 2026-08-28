@@ -1,0 +1,4 @@
+# Only index.html + vercel.json need to ship.
+.claude/
+archive/
+PROJECT.md
