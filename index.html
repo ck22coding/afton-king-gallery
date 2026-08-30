@@ -1425,19 +1425,20 @@ function Lightbox({ painting, paintings, onClose, onNavigate }) {
 }
 
 // ── Live Portraits ──
-// DRAFT ANSWERS — every number below (and any other figure) is a placeholder.
-// Afton must confirm/replace each one before this goes live.
+// Answers confirmed by Afton 2026-08-29, EXCEPT these four, which are
+// still drafts: booking lead time, color matching, outdoor events,
+// digital copies.
 const FAQ_ITEMS = [
-  { q: 'How many of my guests will receive a portrait?', a: 'About 10–15 per hour. A 3-hour reception is roughly 30–45 guests.' },
-  { q: 'How large are the portraits?', a: '5×7 inches, oil on primed board.' },
-  { q: 'What will I need to provide?', a: 'A 6×6 ft spot with foot traffic, one 6-ft table, two chairs, a power outlet, and decent light. For events over 4 hours, a meal.' },
-  { q: 'How long does one portrait take?', a: '4–6 minutes per guest, painted from life.' },
-  { q: 'Do guests take them home that night?', a: 'Yes. Each is boxed and ready to carry — oil stays tacky for a day, so the box matters.' },
+  { q: 'How many of my guests will receive a portrait?', a: 'About 18–25 guests per hour. Portraits average 2 guests each, 4 maximum.' },
+  { q: 'How large are the portraits?', a: '5×7 inches.' },
+  { q: 'What will I need to provide?', a: 'A 6×6 ft spot with foot traffic, one 6-ft table, one chair, a power outlet, and decent light. For events over 2 hours, a meal.' },
+  { q: 'How long does one portrait take?', a: 'About 5 minutes per portrait.' },
+  { q: 'Do guests take them home that night?', a: 'Yes! Each one is individually packaged.' },
   { q: 'How far in advance should I book?', a: '6–12 months for a Saturday in peak season; off-season dates are often open at 2–3 months.' },
-  { q: "What's the deposit and cancellation policy?", a: 'A [X]% deposit holds the date; refundable up to [X] days out.' },
+  { q: "What's the deposit and cancellation policy?", a: 'A 20% deposit holds the date; refundable up to 45 days out.' },
   { q: 'Do you do events other than weddings?', a: 'Yes — showers, corporate parties, birthdays, church and community events.' },
   { q: 'Can you match our colors or theme?', a: 'Yes, palette can be tuned to your florals or invitation suite.' },
-  { q: 'Is there a travel fee?', a: 'Free within [X] miles of Provo, UT; beyond that, mileage and lodging.' },
+  { q: 'Is there a travel fee?', a: 'Free within 15 miles of Highland, UT; beyond that, mileage and lodging.' },
   { q: 'What about outdoor events?', a: 'Workable with shade and wind protection — direct sun and gusts are the two real problems.' },
   { q: 'Do we get digital copies?', a: 'Yes, every portrait is photographed and sent as a gallery link after the event.' }
 ];
@@ -1519,9 +1520,9 @@ function LivePortraitsView() {
   return (
     <div className="lp">
       <div className="idx-eyebrow">LIVE PORTRAITS</div>
-      <h1 className="idx-h lp-h">Painted from life,<br />at your event.</h1>
+      <h1 className="idx-h lp-h">Painted live,<br />at your event.</h1>
       {/* DRAFT COPY — Afton to review/rewrite before launch */}
-      <p className="lp-lede">Afton sets up an easel at your reception and paints your guests from life, one sitting at a time — a live 5×7 oil portrait, boxed up and ready to take home the same night.</p>
+      <p className="lp-lede">Afton sets up an easel at your reception and paints your guests live, one sitting at a time — a 5×7 watercolor portrait, individually packaged and ready to take home the same night.</p>
       <p className="lp-lede">It works as a stand-alone activity or alongside a photo booth, and travels to weddings, showers, and private events.</p>
 
       {/* PHASE 2 SLOT — full-width band (reference/portrait pairs, table
